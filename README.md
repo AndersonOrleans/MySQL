@@ -294,9 +294,30 @@ ________________________________________________________________________________
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-### 📌 **DDL:**
+## 📌 Comandos DML (Data Manipulation Language) — Manipulação de Dados
 
-- O comando `CREATE TABLE` é considerado um comando DDL (Data Definition Language), que é usado para **definir e modificar estruturas no banco de dados**, como **tabelas, índices e esquemas.**
+| Comando   | Função                                  | Exemplo básico                             |
+|-----------|----------------------------------------|-------------------------------------------|
+| `SELECT`  | Buscar/consultar dados                  | `SELECT * FROM pessoas;`                   |
+| `INSERT`  | Inserir novos registros                 | `INSERT INTO pessoas (nome) VALUES ('Ana');` |
+| `UPDATE`  | Atualizar registros existentes          | `UPDATE pessoas SET peso = 70 WHERE id=1;` |
+| `DELETE`  | Apagar registros                       | `DELETE FROM pessoas WHERE id=1;`         |
+| `CALL`    | Executar uma procedure armazenada       | `CALL minha_procedure();`                  |
+| `EXPLAIN` | Analisar consulta (não altera dados)   | `EXPLAIN SELECT * FROM pessoas;`          |
+
+---
+
+## 📌 Comandos DDL (Data Definition Language) — Definição da Estrutura
+
+| Comando    | Função                                  | Exemplo básico                                     |
+|------------|----------------------------------------|---------------------------------------------------|
+| `CREATE`   | Criar banco, tabela, índice, view      | `CREATE TABLE pessoas (...);`                      |
+| `ALTER`    | Modificar estrutura de tabelas         | `ALTER TABLE pessoas ADD COLUMN email VARCHAR(50);` |
+| `DROP`     | Apagar banco, tabela, índice           | `DROP TABLE pessoas;`                              |
+| `TRUNCATE` | Apagar dados de uma tabela (rápido)   | `TRUNCATE TABLE pessoas;`                          |
+| `RENAME`   | Renomear tabelas, colunas              | `RENAME TABLE pessoas TO clientes;`               |
+| `COMMENT`  | Adicionar comentários (metadados)      | Usado em tabelas/colunas para documentação        |
+
 
 
 
