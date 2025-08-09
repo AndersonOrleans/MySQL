@@ -213,6 +213,13 @@ Define a coluna id como chave primária, ou seja, identificador único de cada r
 
 Define que a tabela usará o charset utf8mb4 para armazenamento de textos.
 
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+### 📌 **DDL:**
+
+- O comando `CREATE TABLE` é considerado um comando DDL (Data Definition Language), que é usado para **definir e modificar estruturas no banco de dados**, como **tabelas, índices e esquemas.**
+
+
 
 
 
