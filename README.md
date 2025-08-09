@@ -28,22 +28,69 @@ ________________________________________________________________________________
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-### Como criar um banco de dados? 
+## 📚 Guia de Criação de Banco de Dados e Tabelas no MySQL
 
-- Para criar um banco de dados vamos dar o seguinte comando:
-  
-  ```
-  create database (aqui tem que ser o nome do banco que vai ser, Ex: cadastro);
-  ```
-  
-- Após o comando acima, vamos clicar no raio com o número 1.
-  
-- Após o banco ser criado, vamos criar tabelas.
-  
+Este guia ensina de forma simples como criar um banco de dados e tabelas no MySQL usando o MySQL Workbench.
+
+🗄️ 1. Como criar um banco de dados
+1. Abrir o MySQL Workbench e garantir que o servidor MySQL esteja rodando.
+2. Criar o banco de dados digitando:
+CREATE DATABASE cadastro;
+Obs.: O nome "cadastro" é apenas um exemplo. Não use acentos nem espaços.
+3. Executar o comando clicando no ícone de raio (⚡) com o número 1 ou selecionando o código e clicando no mesmo ícone.
+4. Confirmar a criação clicando com o botão direito na lista de bancos e escolhendo "Refresh All".
+
+📋 2. Como criar uma tabela
+1. Selecionar o banco de dados com:
+USE cadastro;
+(Se o nome for diferente, substitua por ele.)
+2. Criar a tabela digitando:
+```
+CREATE TABLE pessoas (
+    nome VARCHAR(30),
+    idade TINYINT,
+    sexo CHAR(1),
+    peso FLOAT,
+    altura FLOAT,
+    nacionalidade VARCHAR(20)
+);
+```
+Descrição dos campos:
+- VARCHAR(30) → texto de até 30 caracteres (nome)
+- TINYINT → número inteiro pequeno (idade)
+- CHAR(1) → texto de 1 caractere (M/F)
+- FLOAT → número decimal (peso/altura)
+- VARCHAR(20) → texto de até 20 caracteres (nacionalidade)
+3. Executar o comando clicando no ícone de raio (⚡).
+4. Atualizar a lista de tabelas no painel lateral clicando em "Refresh".
+5. Verificar os atributos clicando no nome do banco, expandindo "Tables", clicando em "pessoas" e depois em "Columns".
+
+✅ Fluxo resumido:
+Criar banco de dados → CREATE DATABASE nome; → Selecionar banco → USE nome; → Criar tabela → CREATE TABLE ... → Verificar no painel lateral.
+
+<img width="953" height="835" alt="02" src="https://github.com/user-attachments/assets/2ebb2843-f44b-4d72-b795-89cc93e1ef5f" />
+
+
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-  ### Como criar uma tabela? 
 
-  - Para criar uma tabela, vamos dar o seguinte comando:
-    
-  - create table pessoas (aquidentro vai os atributos);
-  - 
+## Como usar o comando DESCRIBE no MySQL
+
+Depois que você criou a tabela pessoas, para ver os detalhes dos campos dela, você pode usar o comando:
+
+```
+DESCRIBE pessoas;
+```
+
+Esse comando mostra:
+
+- Nome dos campos (colunas)
+- Tipo de dado de cada campo (ex.: VARCHAR, INT)
+- Se o campo pode ser NULL (aceita valor vazio ou não)
+- Se é chave primária (Primary Key)
+- Informações sobre padrão (default) e outras propriedades
+
+**Exemplo:** 
+
+<img width="655" height="173" alt="03" src="https://github.com/user-attachments/assets/fb3bdf46-2499-40d8-88c2-61fae61be1ab" />
+
+  
