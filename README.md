@@ -155,7 +155,7 @@ DEFAULT COLLATE utf8mb4_general_ci;
 - Consistência nas comparações: Assegura que operações envolvendo texto, como buscas e ordenações, sejam realizadas de forma natural, sem diferenciação entre maiúsculas e minúsculas, promovendo uma melhor experiência para aplicações e usuários.
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
-## 📚 Criação do banco de dados com configuração adequada e descrição da tabela: 
+## 📚 Criação do banco de dados com configuração adequada e descrição:
 
 ```
 CREATE DATABASE cadastro
