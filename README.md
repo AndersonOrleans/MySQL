@@ -157,6 +157,8 @@ DEFAULT COLLATE utf8mb4_general_ci;
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 ## 📚 Criação do banco de dados com configuração adequada e descrição:
 
+### ✏️ Passo 1 - Criando o banco de dados: 
+
 ```
 CREATE DATABASE cadastro
 DEFAULT CHARACTER SET utf8mb4
@@ -175,7 +177,7 @@ primary key (id)
 ) default charset = utf8mb4;
 ```
 
-### 💡 **Explicando coluna:**
+### 💡 **Explicação:**
 
 - `id INT NOT NULL AUTO_INCREMENT:` 
 
@@ -212,6 +214,42 @@ Define a coluna id como chave primária, ou seja, identificador único de cada r
 - `DEFAULT CHARSET = utf8mb4:`  
 
 Define que a tabela usará o charset utf8mb4 para armazenamento de textos.
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+### ✏️ Passo 2 - Incerindo dados no banco de dados: 
+
+```
+INSERT INTO pessoas 
+(id, nome, nascimento, sexo, peso, altura, nacionalidade)
+VALUES 
+(default, 'Nathalia Orleans', '2003-08-02', 'F', 65.3, 1.60, 'Brasil');
+
+```
+### 💡 **Explicação:**
+
+- `INSERT INTO pessoas` → indica que você quer inserir dados na tabela chamada `pessoas`.
+  
+- `(id, nome, nascimento, sexo, peso, altura, nacionalidade)`→ lista de colunas onde os valores serão colocados, na ordem exata.
+  
+- `VALUES` → palavra-chave que introduz os valores que serão inseridos.
+
+- `default` → para a coluna `id`, significa "usar o valor padrão".
+
+- No caso do `id` que é **AUTO_INCREMENT**, o MySQL vai gerar automaticamente o próximo número disponível.
+
+- `'Nathalia Orleans'` → nome (texto).
+
+- `'2003-08-02` → data de nascimento no formato **YYYY-MM-DD.**
+
+- `'F'` → valor do campo sexo, que no seu caso só pode ser `M` ou `F`.
+
+- `65.3` → peso (número decimal).
+
+- `1.60` → altura (número decimal).
+
+- `'Brasil'` → nacionalidade.
+
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
