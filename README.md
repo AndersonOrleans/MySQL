@@ -220,9 +220,12 @@ ________________________________________________________________________________
 ### ✏️ Passo 2 - Incerindo dados no banco de dados: 
 
 ```
-INSERT INTO pessoas 
+INSERT INTO pessoas
+
 (id, nome, nascimento, sexo, peso, altura, nacionalidade)
-VALUES 
+
+VALUES
+
 (default, 'Nathalia Orleans', '2003-08-02', 'F', 65.3, 1.60, 'Brasil');
 
 ```
@@ -250,16 +253,44 @@ VALUES
 
 - `'Brasil'` → nacionalidade.
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+## 📌 Dica muito importante sobre o passo 2, que se refere à inserção de dados no banco de dados:
+
+- No passo número 2, usamos desta forma:
+
+```
+INSERT INTO pessoas
+
+(id, nome, nascimento, sexo, peso, altura, nacionalidade)
+
+VALUES
+
+(default, 'Nathalia Orleans', '2003-08-02', 'F', 65.3, 1.60, 'Brasil');
+```
+
+- Mas podemos usar desta forma também:
+
+```
+INSERT INTO pessoas VALUES
+
+(default, 'Nathalia Orleans', '2003-08-02', 'F', 65.3, 1.60, 'Brasil');
+```
+
+- Porque podemos usar desta forma?
+- Por que na tabela já criada no banco de dados, está organizada de formar que deve receber as informações inceridas. Como o exemplo abaixo:
+  
+<img width="208" height="140" alt="06" src="https://github.com/user-attachments/assets/0b245318-ce3e-4252-aceb-06fefab896b3" />
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 ## 🗨️ 🗒️Verificando os dados já inseridos na tabela: 
 
 <img width="679" height="108" alt="05" src="https://github.com/user-attachments/assets/6a523e63-abf6-4270-93fb-691f66b06d17" />
 
 - Para verificar os dados inseridos na tabela no banco de dados, vamos usar o comando:
+
+    `SELECT * FROM e o nome da tabela;`
   
-  `SELECT * FROM e o nome da tabela;`
-  
-  **Exemplo:** `SELECT * FROM pessoas;`
+    **Exemplo:** `SELECT * FROM pessoas;`
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
