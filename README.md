@@ -93,4 +93,69 @@ Esse comando mostra:
 
 <img width="655" height="173" alt="03" src="https://github.com/user-attachments/assets/fb3bdf46-2499-40d8-88c2-61fae61be1ab" />
 
+
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+## Como apagar um banco de dados
+
+No **MySQL Workbench**:
+
+- Para apagar um bancos ou tabelas via SQL, use a opção **File > New Query Tab** (Arquivo > Nova aba de consulta).  
+- Essa opção abre um editor onde você pode digitar comandos SQL manualmente, como:
+
+```sql
+DROP DATABASE cadastro;
+```
+
+Após digitar o comando, clique no ícone de raio (⚡) para executar e o banco será apagado.
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+## Melhores práticas para criação de banco de dados no MySQL
+
+```sql
+CREATE DATABASE cadastro
+DEFAULT CHARACTER SET utf8mb4
+DEFAULT COLLATE utf8mb4_general_ci;
+```
+
+---
+
+## Detalhamento do comando
+
+- **CREATE DATABASE cadastro**
   
+  Inicializa a criação de um novo banco de dados denominado cadastro, que servirá como container para as tabelas e objetos relacionados.
+
+- **DEFAULT CHARACTER SET utf8mb4**
+  
+  Estabelece o conjunto de caracteres padrão para o banco de dados.
+ 
+  Essa configuração determina os caracteres que poderão ser armazenados, abrangendo letras, números, símbolos, acentuações e emojis.
+
+  A codificação utf8mb4 é a implementação completa do padrão UTF-8, suportando todo o espectro Unicode, garantindo compatibilidade com caracteres especiais e emojis.
+  
+  Sua adoção é recomendada para evitar limitações associadas ao charset utf8 tradicional, que não suporta adequadamente caracteres multibyte.
+
+- **DEFAULT COLLATE utf8mb4_general_ci**
+  
+  Define a regra padrão de ordenação e comparação de dados textuais no banco.
+  
+  A collation utf8mb4_general_ci realiza comparações insensíveis a maiúsculas e minúsculas (case insensitive), facilitando operações de busca e ordenação que não diferenciam o uso de caixa alta ou baixa.
+    
+  Além disso, estabelece a sequência alfabética para ordenação de strings dentro do banco de dados.
+
+---
+
+## Justificativa para as configurações adotadas
+
+- Compatibilidade e abrangência: Garante o suporte completo a caracteres Unicode, incluindo símbolos especiais e emojis, eliminando problemas de armazenamento e exibição.
+  
+- Consistência nas comparações: Assegura que operações envolvendo texto, como buscas e ordenações, sejam realizadas de forma natural, sem diferenciação entre maiúsculas e minúsculas, promovendo uma melhor experiência para aplicações e usuários.
+
+
+
+
+
+
