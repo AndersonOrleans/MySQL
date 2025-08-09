@@ -28,7 +28,7 @@ ________________________________________________________________________________
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-## 📚 Guia de Criação de Banco de Dados e Tabelas no MySQL
+## 📚 Guia de Criação de Banco de Dados e Tabelas no MySQL Básico: 
 
 Este guia ensina de forma simples como criar um banco de dados e tabelas no MySQL usando o MySQL Workbench.
 
@@ -73,7 +73,7 @@ Criar banco de dados → CREATE DATABASE nome; → Selecionar banco → USE nome
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-## Como usar o comando DESCRIBE no MySQL
+## 💡Como usar o comando DESCRIBE no MySQL
 
 Depois que você criou a tabela pessoas, para ver os detalhes dos campos dela, você pode usar o comando:
 
@@ -97,7 +97,7 @@ Esse comando mostra:
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-## Como apagar um banco de dados
+## 💡 Como apagar um banco de dados
 
 No **MySQL Workbench**:
 
@@ -112,7 +112,7 @@ Após digitar o comando, clique no ícone de raio (⚡) para executar e o banco 
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-## Melhores práticas para criação de banco de dados no MySQL
+## 💡Melhores práticas para criação de banco de dados no MySQL
 
 ```sql
 CREATE DATABASE cadastro
@@ -122,7 +122,7 @@ DEFAULT COLLATE utf8mb4_general_ci;
 
 ---
 
-## Detalhamento do comando
+## 📄 Detalhamento do comando
 
 - **CREATE DATABASE cadastro**
   
@@ -148,12 +148,70 @@ DEFAULT COLLATE utf8mb4_general_ci;
 
 ---
 
-## Justificativa para as configurações adotadas
+## 📄 Justificativa para as configurações adotadas
 
 - Compatibilidade e abrangência: Garante o suporte completo a caracteres Unicode, incluindo símbolos especiais e emojis, eliminando problemas de armazenamento e exibição.
   
 - Consistência nas comparações: Assegura que operações envolvendo texto, como buscas e ordenações, sejam realizadas de forma natural, sem diferenciação entre maiúsculas e minúsculas, promovendo uma melhor experiência para aplicações e usuários.
 
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+## 📚 Criação do banco de dados com configuração adequada e descrição da tabela: 
+
+```
+CREATE DATABASE cadastro
+DEFAULT CHARACTER SET utf8mb4
+DEFAULT COLLATE utf8mb4_general_ci;
+use cadastro;
+
+create table pessoas (
+id int not null auto_increment,
+nome varchar(30) not null,
+nascimento date,
+sexo enum('M', 'F'),
+peso decimal(3,2),
+altura decimal(3,2),
+nacionalidade varchar(20) default 'Brasil',
+primary key (id)
+) default charset = utf8mb4;
+```
+
+### 💡 **Explicando coluna:**
+
+- `id INT NOT NULL AUTO_INCREMENT:` 
+
+Coluna do tipo inteiro (INT), não aceita valor nulo (NOT NULL), e seu valor aumenta automaticamente (AUTO_INCREMENT) a cada novo registro. Usado como identificador único.
+
+- `nome VARCHAR(30) NOT NULL:`  
+
+Texto variável com até 30 caracteres, obrigatório (não pode ser nulo).
+
+- `nascimento DATE:`  
+
+Data de nascimento, tipo de dado DATE.
+
+- `sexo ENUM('M', 'F'):`  
+
+Campo que aceita só valores pré-definidos: 'M' (masculino) ou 'F' (feminino).
+
+- `peso DECIMAL(3,2):`  
+
+Número decimal com 3 dígitos no total, sendo 2 após a vírgula. Exemplo: 70.50
+
+- `altura DECIMAL(3,2):`  
+
+Mesma definição que peso, para altura.
+
+- `nacionalidade VARCHAR(20) DEFAULT 'Brasil':`  
+
+Texto até 20 caracteres. Se nenhum valor for informado, o padrão será 'Brasil'.
+
+- `PRIMARY KEY (id):`  
+
+Define a coluna id como chave primária, ou seja, identificador único de cada registro.
+
+- `DEFAULT CHARSET = utf8mb4:`  
+
+Define que a tabela usará o charset utf8mb4 para armazenamento de textos.
 
 
 
