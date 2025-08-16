@@ -477,6 +477,33 @@ ________________________________________________________________________________
 `select * from cursos`  
 -- Recupera todos os registros da tabela 'cursos' para verificar como ficou após a exclusão.
 
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+# Como fazer um Drump no MySQL: 
+
+O dump é uma cópia do banco de dados, incluindo estrutura e registros, usada para backup, migração ou compartilhamento.
+
+Para que serve:
+
+Backup: protege os dados contra perda.
+
+Migração: transfere o banco entre servidores.
+
+Restauração: recria o banco a partir do arquivo de dump.
+
+Compartilhamento: envia dados de um projeto para outro.
+
+**Passo a Passo:** 
+
+<img width="540" height="415" alt="01" src="https://github.com/user-attachments/assets/c1a887a6-3937-4867-96a9-eb523017f00a" /> 
+
+
+<img width="1919" height="675" alt="02" src="https://github.com/user-attachments/assets/465c92a1-3fc3-4740-94b9-ac988cdc39d1" />
+
+
+
+
+
 
 
 
