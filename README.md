@@ -421,7 +421,32 @@ Este é um resumo dos principais comandos do MySQL, separados por categorias (DD
 
 ---
 
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
+# Manipulação de Registros 
+### Podemos chamar também de: Manipulando Linhas ou Manipulando Tuplas. 
+
+<img width="952" height="687" alt="01" src="https://github.com/user-attachments/assets/aadff730-7764-41ee-9644-487fb9ac1e73" />
+
+## Vamos alterar algumas palavras das tabelas que estão escritas de forma errada:
+
+<img width="782" height="386" alt="02" src="https://github.com/user-attachments/assets/1c554ed1-625e-4c41-aeb0-f172b282ce48" />
+
+#Comandos usados para alterar dados em uma tabela:
+
+## Update de registros em MySQL
+
+`update cursos`
+-- Atualiza registros da tabela 'cursos'.
+
+`set nome = 'HTML5'`  
+-- Define o novo valor para a coluna 'nome', substituindo o valor antigo.
+
+`where idcurso = '1'`  
+-- Especifica qual registro será alterado, filtrando pelo ID igual a 1.
+
+`select * from cursos`
+-- Recupera todos os registros da tabela 'cursos' para verificar as alterações.
 
 
 
