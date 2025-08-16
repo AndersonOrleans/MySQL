@@ -318,6 +318,113 @@ ________________________________________________________________________________
 | `RENAME`   | Renomear tabelas, colunas              | `RENAME TABLE pessoas TO clientes;`               |
 | `COMMENT`  | Adicionar comentários (metadados)      | Usado em tabelas/colunas para documentação        |
 
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+# 📌 Guia Rápido de Comandos MySQL
+
+Este é um resumo dos principais comandos do MySQL, separados por categorias (DDL, DML, DQL, DCL e TCL).
+
+---
+
+## 🏗️ 1. DDL (Data Definition Language) – Estrutura do banco
+
+| Comando | Função |
+|---------|--------|
+| `CREATE DATABASE nome;` | Cria um banco de dados |
+| `DROP DATABASE nome;` | Exclui um banco de dados |
+| `USE nome;` | Seleciona o banco de dados |
+| `CREATE TABLE nome (...);` | Cria uma tabela |
+| `DROP TABLE nome;` | Exclui uma tabela |
+| `ALTER TABLE nome ADD coluna tipo;` | Adiciona uma coluna |
+| `ALTER TABLE nome DROP coluna;` | Remove uma coluna |
+| `ALTER TABLE nome MODIFY coluna tipo;` | Modifica tipo de coluna |
+| `ALTER TABLE nome CHANGE coluna_antiga nova_coluna tipo;` | Renomeia coluna |
+| `ALTER TABLE nome RENAME TO novo_nome;` | Renomeia a tabela |
+| `TRUNCATE TABLE nome;` | Apaga todos os dados, mas mantém a tabela |
+
+---
+
+## 📝 2. DML (Data Manipulation Language) – Manipulação de dados
+
+| Comando | Função |
+|---------|--------|
+| `INSERT INTO tabela (...) VALUES (...);` | Insere dados |
+| `UPDATE tabela SET coluna = valor WHERE condição;` | Atualiza dados |
+| `DELETE FROM tabela WHERE condição;` | Exclui registros |
+
+---
+
+## 🔍 3. DQL (Data Query Language) – Consultas
+
+| Comando | Função |
+|---------|--------|
+| `SELECT * FROM tabela;` | Seleciona todos os registros |
+| `SELECT coluna1, coluna2 FROM tabela;` | Seleciona colunas específicas |
+| `WHERE` | Filtra registros |
+| `ORDER BY coluna ASC|DESC;` - Ordena resultados|
+| `GROUP BY coluna;` | Agrupa registros |
+| `HAVING` | Filtra após agrupamento |
+| `LIMIT n;` | Limita registros retornados |
+
+🔹 **Funções úteis em consultas**:
+- `COUNT(*)` → Conta registros  
+- `SUM(coluna)` → Soma valores  
+- `AVG(coluna)` → Média  
+- `MAX(coluna)` → Maior valor  
+- `MIN(coluna)` → Menor valor  
+
+---
+
+## 🔐 4. DCL (Data Control Language) – Controle de acesso
+
+| Comando | Função |
+|---------|--------|
+| `CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'senha';` | Cria usuário |
+| `GRANT ALL PRIVILEGES ON banco.* TO 'usuario'@'localhost';` | Concede permissões |
+| `REVOKE` | Remove permissões |
+| `DROP USER 'usuario'@'localhost';` | Exclui usuário |
+
+---
+
+## 🔄 5. TCL (Transaction Control Language) – Transações
+
+| Comando | Função |
+|---------|--------|
+| `START TRANSACTION;` | Inicia transação |
+| `COMMIT;` | Confirma alterações |
+| `ROLLBACK;` | Desfaz alterações |
+| `SAVEPOINT nome;` | Cria ponto de restauração |
+| `RELEASE SAVEPOINT nome;` | Remove ponto de restauração |
+
+---
+
+## 📚 6. Outros comandos úteis
+
+| Comando | Função |
+|---------|--------|
+| `DESCRIBE tabela;` | Mostra estrutura da tabela |
+| `SHOW COLUMNS FROM tabela;` | Lista colunas da tabela |
+| `SHOW TABLES;` | Lista todas as tabelas do banco |
+| `SHOW DATABASES;` | Lista todos os bancos de dados |
+| `SHOW CREATE TABLE tabela;` | Mostra SQL de criação da tabela |
+| `SHOW PROCESSLIST;` | Lista processos em execução |
+
+---
+
+## 🚀 Resumão
+
+- **DDL** → estrutura (banco, tabelas, colunas)  
+- **DML** → dados (inserir, atualizar, apagar)  
+- **DQL** → consultas (buscar e filtrar)  
+- **DCL** → permissões (usuários e acessos)  
+- **TCL** → transações (commit, rollback, savepoint)  
+
+---
+
+
+
+
+
 
 
 
