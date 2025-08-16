@@ -447,6 +447,36 @@ ________________________________________________________________________________
 
 `select * from cursos`
 -- Recupera todos os registros da tabela 'cursos' para verificar as alterações.
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+`update cursos` 
+-- Atualiza registros da tabela 'cursos'.
+
+`set nome = 'PHP', ano = '2015'`  
+-- Define novos valores para as colunas 'nome' e 'ano'.
+
+`where idcurso = '4'`  
+-- Especifica que a alteração será feita no registro com ID 4.
+
+`select * from cursos`  
+-- Recupera todos os registros da tabela 'cursos' para verificar as alterações.
+
+
+<img width="295" height="105" alt="03" src="https://github.com/user-attachments/assets/0e821ed8-6fbc-48fb-b0ab-649d5c217259" />
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+# Removendo uma linha da tabela: 
+
+`delete from cursos`  
+-- Remove registros da tabela 'cursos'.
+
+`where idcurso = '8'` 
+-- Especifica qual registro será deletado, filtrando pelo ID igual a 8.
+
+`select * from cursos`  
+-- Recupera todos os registros da tabela 'cursos' para verificar como ficou após a exclusão.
+
 
 
 
